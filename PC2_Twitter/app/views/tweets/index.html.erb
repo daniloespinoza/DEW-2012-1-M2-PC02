@@ -1,0 +1,26 @@
+<h1>Iniciar Sesion en Twitter</h1>
+
+<%= form_for(@tweet) do |f| %>
+
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Ingresar'%>
+  </div>  
+ <% end %>
+
+<%= form_for(@tweet, :url => "read_text") do |f| %>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Buscar Status"%>
+  </div>
+<% end %>
